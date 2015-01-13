@@ -10,6 +10,8 @@
 		4601DB211A3514B1009CA9FD /* AnchorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4601DB201A3514B1009CA9FD /* AnchorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4601DB271A3514B1009CA9FD /* AnchorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4601DB1B1A3514B1009CA9FD /* AnchorKit.framework */; };
 		4601DB2E1A3514B1009CA9FD /* AnchorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4601DB2D1A3514B1009CA9FD /* AnchorKitTests.swift */; };
+		4601DB381A3514E6009CA9FD /* AnchorServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4601DB371A3514E6009CA9FD /* AnchorServer.swift */; };
+		4601DB3A1A351506009CA9FD /* AnchorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4601DB391A351506009CA9FD /* AnchorClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		4601DB261A3514B1009CA9FD /* AnchorKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnchorKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4601DB2C1A3514B1009CA9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4601DB2D1A3514B1009CA9FD /* AnchorKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorKitTests.swift; sourceTree = "<group>"; };
+		4601DB371A3514E6009CA9FD /* AnchorServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorServer.swift; sourceTree = "<group>"; };
+		4601DB391A351506009CA9FD /* AnchorClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				4601DB201A3514B1009CA9FD /* AnchorKit.h */,
+				4601DB371A3514E6009CA9FD /* AnchorServer.swift */,
+				4601DB391A351506009CA9FD /* AnchorClient.swift */,
 				4601DB1E1A3514B1009CA9FD /* Supporting Files */,
 			);
 			path = AnchorKit;
@@ -209,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4601DB381A3514E6009CA9FD /* AnchorServer.swift in Sources */,
+				4601DB3A1A351506009CA9FD /* AnchorClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +327,7 @@
 		4601DB321A3514B1009CA9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +337,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4601DB331A3514B1009CA9FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
